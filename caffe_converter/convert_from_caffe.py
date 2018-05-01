@@ -8,7 +8,7 @@ import torchvision
 from models import Deeplab
 from collections import OrderedDict
 import caffe.proto.caffe_pb2 as caffe_pb2
-model = open('/home/laughtervv/Downloads/deeplab_global_baseline_vgg_37.08/train_large_iter_25000_vgg.caffemodel', 'rb')
+model = open('downloaded_caffemodel.caffemodel', 'rb')
 net_param = caffe_pb2.NetParameter()
 net_param.ParseFromString(model.read())
 assert (net_param.layer[42].name =='pool6_1x1_norm')
